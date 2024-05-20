@@ -6,8 +6,8 @@ public class maximum_pairwise_product {
     Scanner scanner = new Scanner(System.in);
     int n = scanner.nextInt();
     int[] numbs = new int[n];
-    int high = -1;
-    int sHigh = -1;
+    long high = -1;
+    long sHigh = -1;
     int highPosition = -1;
     for (int i = 0; i < n; i++) {
       numbs[i] = scanner.nextInt();

@@ -11,7 +11,7 @@ public class maximum_pairwise_product {
     int highPosition = -1;
     for (int i = 0; i < n; i++) {
       numbs[i] = scanner.nextInt();
-      if (i > 1 && numbs[i] > numbs[i - 1]) {
+      if (i > 1 && numbs[i] > numbs[i - 1] && numbs[i] > high) {
         high = numbs[i];
         highPosition = i;
       }
@@ -19,10 +19,8 @@ public class maximum_pairwise_product {
 
 //    System.out.println(" " + high + " " + highPosition);
     for (int x = 0; x < n - 1; x++) {
-      if (numbs[x] > numbs[x + 1] && numbs[x] <= high && highPosition != x) {
+      if (numbs[x] <= high && highPosition != x && numbs[x] > sHigh) {
         sHigh = numbs[x];
-      } else if (numbs[x + 1] <= high && highPosition != x + 1) {
-        sHigh = numbs[x + 1];
       }
     }
     System.out.println(high * sHigh);

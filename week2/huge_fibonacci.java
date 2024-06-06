@@ -11,25 +11,20 @@ public class huge_fibonacci {
     long n = scanner.nextLong();
     int m = scanner.nextInt();
     BigInteger value = null;
-    BigInteger modVal = null;
 
     if (n == 1) {
-      modVal = BigInteger.ONE;
+      value = BigInteger.ONE;
     } else {
       BigInteger n_0 = BigInteger.ZERO;
       BigInteger n_1 = BigInteger.ONE;
-      for (int i = 2; i <= n%m; i++) {
+      for (int i = 2; i <= n; i++) {
         value = n_0.add(n_1);
         n_0 = n_1;
         n_1 = value;
-        System.out.println("n " + i + " value " + value);
-        if (value.mod(BigInteger.valueOf(m)).intValue() > m) {
-          modVal = value.mod(BigInteger.valueOf(m));
-          break;
-        }
+//        System.out.println("n " + i + " value " + value);
       }
     }
 
-    System.out.println(modVal);
+    System.out.println(value.mod(BigInteger.valueOf(m)));
   }
 }

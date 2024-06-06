@@ -3,6 +3,7 @@ package week2;
 import java.math.BigInteger;
 import java.util.Scanner;
 
+// Last Digit of the Sum of Squares of Fibonacci Numbers
 public class fibonacci_sum_of_squares {
 
   public static void main(String[] args) {

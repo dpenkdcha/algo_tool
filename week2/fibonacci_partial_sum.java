@@ -3,6 +3,7 @@ package week2;
 import java.math.BigInteger;
 import java.util.Scanner;
 
+// Last Digit of the Sum of Fibonacci Numbers
 public class fibonacci_partial_sum {
 
   public static void main(String[] args) {
@@ -35,8 +36,7 @@ public class fibonacci_partial_sum {
         if (i == m + 1) {
           valueS = value;
         }
-        System.out.println("n " + i + " value " + value + " valueS " + valueS );
-
+        // System.out.println("n " + i + " value " + value + " valueS " + valueS );
       }
       value = value.subtract(valueS);
     }

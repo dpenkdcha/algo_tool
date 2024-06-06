@@ -3,7 +3,7 @@ package week2;
 import java.math.BigInteger;
 import java.util.Scanner;
 
-// Last Digit of the Sum of Fibonacci Numbers
+// Last Digit of the Sum of Fibonacci Numbers Again
 public class fibonacci_partial_sum {
 
   public static void main(String[] args) {

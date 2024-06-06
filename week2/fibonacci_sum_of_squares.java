@@ -32,7 +32,7 @@ public class fibonacci_sum_of_squares {
 //      value = value.subtract(BigInteger.ONE);
     }
 
-    BigInteger squareSumLastDigit = (value.multiply(value_1)).remainder(BigInteger.TEN);
+    BigInteger squareSumLastDigit = (value.multiply(value_1)).mod(BigInteger.TEN);
 //    int lastDigit = Integer.parseInt(squareSum.toString().substring(value.toString().length() - 1));
 //    System.out.println("value " + value.multiply(BigInteger.valueOf(n)) + " lastDigit " + squareSumLastDigit);
     System.out.println(squareSumLastDigit);

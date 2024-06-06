@@ -15,7 +15,7 @@ public class fibonacci_partial_sum {
     BigInteger valueS = null;
 
     if (m == 0) {
-      valueS = BigInteger.ZERO;
+      valueS = BigInteger.ONE;
     } else if (m == 1) {
       valueS = BigInteger.ONE;
     }

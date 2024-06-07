@@ -9,22 +9,24 @@ public class fibonacci_last_digit {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     int n = scanner.nextInt();
-    BigInteger value = null;
+    BigInteger value;
+    int[] lastDigit = new int[60];
 
     if (n == 0) {
-      value = BigInteger.ZERO;
+      lastDigit[0] = 0;
     } else if (n == 1) {
-      value = BigInteger.ONE;
+      lastDigit[1] = 1;
     } else {
       BigInteger n_0 = BigInteger.ZERO;
       BigInteger n_1 = BigInteger.ONE;
-      for (int i = 2; i <= n; i++) {
+      for (int i = 2; i < 60; i++) {
         value = n_0.add(n_1);
         n_0 = n_1;
         n_1 = value;
+        lastDigit[i] = value.mod(BigInteger.TEN).intValue();
       }
     }
 
-    System.out.println(value.toString().substring(value.toString().length()-1));
+    System.out.println(lastDigit[n % 60]);
   }
 }

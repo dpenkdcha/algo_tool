@@ -1,4 +1,3 @@
-package week2;
 
 import java.math.BigInteger;
 import java.util.Scanner;
@@ -9,25 +8,23 @@ public class fibonacci_sum_of_squares {
   public static void main(String[] args) {
 
     Scanner scanner = new Scanner(System.in);
-    int n = scanner.nextInt();
+    long n = scanner.nextLong();
     BigInteger value;
     int[] lastDigit = new int[60];
 
-    if (n == 0) {
-      lastDigit[0] = 0;
-    } else if (n == 1) {
-      lastDigit[1] = 1;
-    } else {
-      BigInteger n_0 = BigInteger.ZERO;
-      BigInteger n_1 = BigInteger.ONE;
-      for (int i = 2; i < 60; i++) {
-        value = n_0.add(n_1);
-        n_0 = n_1;
-        n_1 = value;
-        lastDigit[i] = value.mod(BigInteger.valueOf(10)).intValue();
-      }
+    lastDigit[0] = 0;
+    lastDigit[1] = 1;
+    BigInteger n_0 = BigInteger.ZERO;
+    BigInteger n_1 = BigInteger.ONE;
+    for (int i = 2; i < 60; i++) {
+      value = n_0.add(n_1);
+      n_0 = n_1;
+      n_1 = value;
+      lastDigit[i] = value.mod(BigInteger.valueOf(10)).intValue();
+      // System.out.println("n " + i + " value " + value + " last " + lastDigit[i]);
     }
 
-    System.out.println(lastDigit[n % 60] * lastDigit[(n + 1) % 6]);
+    // System.out.println("n " + n % 60 + " n+1 " + (n + 1) % 60);
+    System.out.println((lastDigit[(int) (n % 60)] * lastDigit[(int) ((n + 1) % 60)])%10);
   }
 }

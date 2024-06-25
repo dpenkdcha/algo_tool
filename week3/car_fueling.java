@@ -17,19 +17,21 @@ public class car_fueling {
     }
 
     if (d > m) {
-      refill = d / m;
-      refill = refill-1;
-      if (d % m > 0) {
-        refill = refill + 1;
-      }
-
-      if(d - stop[n-1] > m) {
+      if ((stop[0] > m) || (d - stop[n - 1] > m)) {
         refill = -1;
+      } else {
+        for (int i = 1; i < n; i++) {
+          if (stop[i] - stop[i - 1] > m) {
+            refill = -1;
+          }
+        }
       }
 
-      for (int i = 1; i < n; i++) {
-        if(stop[i] - stop[i-1] > m) {
-          refill = -1;
+      if (refill != -1) {
+        refill = d / m;
+        refill = refill - 1;
+        if (d % m > 0) {
+          refill = refill + 1;
         }
       }
     }

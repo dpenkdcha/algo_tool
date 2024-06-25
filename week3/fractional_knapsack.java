@@ -11,7 +11,7 @@ public class fractional_knapsack {
 		int W = scanner.nextInt();
 		int[] value = new int[n];
 		int[] weight = new int[n];
-		float[] perUnitValue = new float[n];
+		double[] perUnitValue = new double[n];
 		int[] indx = new int[n];
 
 		for (int i = 0; i < n; i++) {
@@ -19,14 +19,14 @@ public class fractional_knapsack {
 			int tWeight = scanner.nextInt();
 			value[i] = tValue;
 			weight[i] = tWeight;
-			perUnitValue[i] = (float) tValue / (float) tWeight;
+			perUnitValue[i] = (double) tValue / (double) tWeight;
 			indx[i] = i;
 		}
 
 		for (int i = 0; i < n; i++) {
 			for (int j = i + 1; j < n; j++) {
 				if (perUnitValue[i] > perUnitValue[j]) {
-					float temp = perUnitValue[j];
+					double temp = perUnitValue[j];
 					perUnitValue[j] = perUnitValue[i];
 					perUnitValue[i] = temp;
 
@@ -38,10 +38,10 @@ public class fractional_knapsack {
 		}
 
 		int count = n;
-		float totalValue = 0;
-		while (W > 0) {
+		double totalValue = 0;
+		while (W > 0 && count > 0) {
 			if (W >= weight[indx[count - 1]]) {
-				totalValue = totalValue + (perUnitValue[count - 1] * weight[indx[count - 1]]);
+				totalValue = totalValue + value[indx[count-1]]; //(perUnitValue[count - 1] * weight[indx[count - 1]]);
 				W = W - weight[indx[count - 1]];
 			} else {
 				totalValue = totalValue + perUnitValue[count - 1] * W;

@@ -23,6 +23,10 @@ public class car_fueling {
         refill = refill + 1;
       }
 
+      if(d - stop[n-1] > m) {
+        refill = -1;
+      }
+
       for (int i = 1; i < n; i++) {
         if(stop[i] - stop[i-1] > m) {
           refill = -1;

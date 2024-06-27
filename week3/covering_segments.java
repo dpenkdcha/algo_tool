@@ -18,20 +18,20 @@ public class covering_segments {
       lPoint[i] = scanner.nextInt();
     }
 
-    for (int i = 0; i < n; i++) {
-      for (int j = i + 1; j < n; j++) {
-        if (fPoint[i] > fPoint[j]) {
-          int temp = fPoint[j];
-          fPoint[j] = fPoint[i];
-          fPoint[i] = temp;
+    // for (int i = 0; i < n; i++) {
+    // for (int j = i + 1; j < n; j++) {
+    // if (fPoint[i] > fPoint[j]) {
+    // int temp = fPoint[j];
+    // fPoint[j] = fPoint[i];
+    // fPoint[i] = temp;
 
-          int temp1 = lPoint[j];
-          lPoint[j] = lPoint[i];
-          lPoint[i] = temp1;
-        }
+    // int temp1 = lPoint[j];
+    // lPoint[j] = lPoint[i];
+    // lPoint[i] = temp1;
+    // }
 
-      }
-    }
+    // }
+    // }
 
     for (int i = 0; i < n; i++) {
       if (touched[i] == false) {
@@ -44,7 +44,7 @@ public class covering_segments {
               howManyTouched++;
             }
           }
-          if(maxTouched < howManyTouched) {
+          if (maxTouched < howManyTouched) {
             maxTouched = howManyTouched;
             points[touchedCount] = j;
           }
@@ -54,15 +54,16 @@ public class covering_segments {
     }
 
     // for (int i = 0; i < n; i++) {
-    //   if (touched[i] == false) {
-    //     for (int j = i + 1; j < n; j++) {
-    //       if (touched[j] == false && lPoint[i] >= fPoint[j] && lPoint[i] <= lPoint[j]) {
-    //         touched[j] = true;
-    //       }
-    //     }
-    //     points[touchedCount] = lPoint[i];
-    //     touchedCount++;
-    //   }
+    // if (touched[i] == false) {
+    // for (int j = i + 1; j < n; j++) {
+    // if (touched[j] == false && lPoint[i] >= fPoint[j] && lPoint[i] <= lPoint[j])
+    // {
+    // touched[j] = true;
+    // }
+    // }
+    // points[touchedCount] = lPoint[i];
+    // touchedCount++;
+    // }
     // }
 
     System.out.println(touchedCount);

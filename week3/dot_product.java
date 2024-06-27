@@ -7,8 +7,8 @@ public class dot_product {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     int n = scanner.nextInt();
-    int[] price = new int[n];
-    int[] clicks = new int[n];
+    long[] price = new long[n];
+    long[] clicks = new long[n];
 
     for (int i = 0; i < n; i++) {
       price[i] = scanner.nextInt();
@@ -21,20 +21,20 @@ public class dot_product {
     for (int i = 0; i < n; i++) {
       for (int j = i + 1; j < n; j++) {
         if (price[i] > price[j]) {
-          int temp = price[j];
+          long temp = price[j];
           price[j] = price[i];
           price[i] = temp;
         }
 
         if (clicks[i] > clicks[j]) {
-          int temp = clicks[j];
+          long temp = clicks[j];
           clicks[j] = clicks[i];
           clicks[i] = temp;
         }
       }
     }
 
-    int revenue = 0;
+    long revenue = 0;
     for (int i = 0; i < n; i++) {
       revenue = revenue + (price[i] * clicks[i]);
     }

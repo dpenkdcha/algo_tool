@@ -1,4 +1,3 @@
-package week3;
 
 import java.util.Scanner;
 
@@ -9,10 +8,11 @@ public class car_fueling {
     int d = scanner.nextInt();
     int m = scanner.nextInt();
     int n = scanner.nextInt();
-    int[] stop = new int[n];
+    int[] stop = new int[n + 1];
     int refill = 0;
 
-    for (int i = 0; i < n; i++) {
+    stop[0] = 0;
+    for (int i = 1; i <= n; i++) {
       stop[i] = scanner.nextInt();
     }
 
@@ -20,18 +20,22 @@ public class car_fueling {
       if ((stop[0] > m) || (d - stop[n - 1] > m)) {
         refill = -1;
       } else {
-        for (int i = 1; i < n; i++) {
-          if (stop[i] - stop[i - 1] > m) {
+        int refillAt = 0;
+        while (refillAt < stop.length-1) {
+          int lastRefill = refillAt;
+
+          while (refillAt < stop.length-1 && stop[refillAt + 1] - stop[lastRefill] <= m) {
+            refillAt++;
+          }
+
+          if (lastRefill == refillAt) {
             refill = -1;
           }
-        }
-      }
 
-      if (refill != -1) {
-        refill = d / m;
-        refill = refill - 1;
-        if (d % m > 0) {
-          refill = refill + 1;
+          if (refillAt < stop.length) {
+            refill++;
+          }
+
         }
       }
     }

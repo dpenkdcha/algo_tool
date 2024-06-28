@@ -9,7 +9,6 @@ public class covering_segments {
     int n = scanner.nextInt();
     int[] fPoint = new int[n];
     int[] lPoint = new int[n];
-    boolean[] touched = new boolean[n];
     int[] points = new int[n];
     int touchedCount = 0;
 

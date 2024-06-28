@@ -29,7 +29,7 @@ public class largest_number {
       cNumber += number[i];
     }
 
-    int cNum = Integer.parseInt(cNumber);
+    long cNum = Long.parseLong(cNumber);
     if (cNum == 0) {
       System.out.println("0");
     } else {

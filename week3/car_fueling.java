@@ -28,12 +28,12 @@ public class car_fueling {
 
       if (lastRefill == refillAt) {
         refill = -1;
+        break;
       }
 
-      if (refillAt < stop.length) {
+      if (refillAt < stop.length-1) {
         refill++;
       }
-
     }
 
     System.out.println(refill);

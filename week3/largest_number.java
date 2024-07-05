@@ -29,14 +29,12 @@ public class largest_number {
       cNumber += number[i];
     }
 
-    long cNum = Long.parseLong(cNumber);
-    if (cNum == 0) {
-      System.out.println("0");
-    } else {
-      cNumber = cNumber.replaceFirst("^0+", "");
-      System.out.println(cNum);
-    }
+    cNumber = cNumber.replaceFirst("^0+", "");
+    System.out.println(cNumber);
 
+    if (cNumber.equals("")) {
+      System.out.println("0");
+    }
   }
 
 }

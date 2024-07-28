@@ -48,5 +48,6 @@ public class fibonacci_partial_sum {
     // System.out.println("mVal" + mVal + " nval " + nVal);
 
     System.out.println(Math.abs(mVal - nVal));
+    scanner.close();
   }
 }

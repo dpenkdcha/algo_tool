@@ -36,6 +36,6 @@ public class fibonacci_sum_of_squares_old {
 //    int lastDigit = Integer.parseInt(squareSum.toString().substring(value.toString().length() - 1));
 //    System.out.println("value " + value.multiply(BigInteger.valueOf(n)) + " lastDigit " + squareSumLastDigit);
     System.out.println(squareSumLastDigit);
-
+    scanner.close();
   }
 }

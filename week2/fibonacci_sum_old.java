@@ -1,3 +1,4 @@
+package week2;
 
 
 import java.math.BigInteger;
@@ -31,6 +32,6 @@ public class fibonacci_sum_old {
       value = value.subtract(BigInteger.ONE);
     }
     System.out.println(value.toString().substring(value.toString().length() - 1));
-
+    scanner.close();
   }
 }

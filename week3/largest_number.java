@@ -35,6 +35,7 @@ public class largest_number {
     if (cNumber.equals("")) {
       System.out.println("0");
     }
+    scanner.close();
   }
 
 }

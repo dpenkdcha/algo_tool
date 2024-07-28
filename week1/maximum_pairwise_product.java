@@ -26,5 +26,6 @@ public class maximum_pairwise_product {
       }
     }
     System.out.println(high * sHigh);
+    scanner.close();
   }
 }

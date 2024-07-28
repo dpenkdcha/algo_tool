@@ -28,5 +28,6 @@ public class fibonacci_last_digit {
     }
 
     System.out.println(lastDigit[n % 60]);
+    scanner.close();
   }
 }

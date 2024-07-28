@@ -41,6 +41,6 @@ public class fibonacci_partial_sum_old {
       value = value.subtract(valueS);
     }
     System.out.println(value.toString().substring(value.toString().length() - 1));
-
+    scanner.close();
   }
 }

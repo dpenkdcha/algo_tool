@@ -1,4 +1,4 @@
-
+package week2;
 
 import java.math.BigInteger;
 import java.util.Scanner;
@@ -40,5 +40,6 @@ public class fibonacci_sum {
     }
 
     System.out.println(val);
+    scanner.close();
   }
 }

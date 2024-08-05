@@ -1,4 +1,4 @@
-  
+package week2;
 
 import java.util.Scanner;
 
@@ -11,6 +11,7 @@ public class lcm {
     lcm gcd = new lcm();
     long d = gcd.eucld(n, m);
     System.out.println((n * m) / d);
+    scanner.close();
   }
 
   private long eucld(long a, long b) {

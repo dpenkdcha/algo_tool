@@ -1,4 +1,4 @@
-
+package week2;
 
 import java.math.BigInteger;
 import java.util.Scanner;
@@ -26,5 +26,6 @@ public class huge_fibonacci {
     }
 
     System.out.println(value.mod(BigInteger.valueOf(m)));
+    scanner.close();
   }
 }

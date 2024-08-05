@@ -1,4 +1,4 @@
-
+package week2;
 
 import java.math.BigInteger;
 import java.util.Scanner;
@@ -25,5 +25,6 @@ public class fibonacci {
     }
 
     System.out.println(value);
+    scanner.close();
   }
 }

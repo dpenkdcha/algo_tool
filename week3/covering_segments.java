@@ -46,5 +46,6 @@ public class covering_segments {
     for (int i = 0; i < touchedCount; i++) {
       System.out.print(points[i] + " ");
     }
+    scanner.close();
   }
 }

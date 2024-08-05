@@ -51,6 +51,7 @@ public class fractional_knapsack {
 		}
 
 		System.out.println(String.format("%.4f", totalValue));
+		scanner.close();
 	}
 
 }

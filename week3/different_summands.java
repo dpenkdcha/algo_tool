@@ -52,6 +52,6 @@ public class different_summands {
     for (Integer integer : summands) {
       System.out.print(integer + " ");
     }
-
+    scanner.close();
   }
 }

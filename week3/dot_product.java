@@ -40,7 +40,7 @@ public class dot_product {
     }
 
     System.out.println(revenue);
-
+    scanner.close();
   }
 
 }

@@ -9,6 +9,7 @@ public class change {
     Scanner scanner = new Scanner(System.in);
     int n = scanner.nextInt();
     System.out.println(((n/10) + (n%10)/5 + (n%5)));
+    scanner.close();
 
     // int m = n;
     // int coinCount = 0;

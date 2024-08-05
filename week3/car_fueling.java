@@ -37,6 +37,7 @@ public class car_fueling {
     }
 
     System.out.println(refill);
+    scanner.close();
 
   }
 }

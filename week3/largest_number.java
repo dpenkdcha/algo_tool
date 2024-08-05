@@ -8,7 +8,6 @@ public class largest_number {
     Scanner scanner = new Scanner(System.in);
     int n = scanner.nextInt();
     String[] number = new String[n];
-    String[] sortedNumber = new String[n];
 
     for (int i = 0; i < n; i++) {
       number[i] = String.valueOf(scanner.nextInt());

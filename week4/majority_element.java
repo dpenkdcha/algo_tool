@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 // 4-3: Majority Element
 public class majority_element {
-  private static int candidate;
 
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);

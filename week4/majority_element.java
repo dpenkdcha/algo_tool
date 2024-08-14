@@ -15,6 +15,7 @@ public class majority_element {
 
     int candidate = findCandidate(A, n);
 
+    System.out.println(candidate);
     if (isMajority(A, n, candidate))
       System.out.println("1");
     else

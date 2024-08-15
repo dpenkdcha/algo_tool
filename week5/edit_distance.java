@@ -1,6 +1,5 @@
 package week5;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 // 5-3: Edit Distance
@@ -11,7 +10,6 @@ public class edit_distance {
     String secondString = scanner.next();
     int fl = firstString.length();
     int sl = secondString.length();
-    int count = 0;
     int[][] dp = new int[fl + 1][sl + 1];
     char[] c1 = new char[fl + 1];
     char[] c2 = new char[sl + 1];

@@ -32,6 +32,21 @@ public class KnapsackWithRepetitions {
     System.out.println(Arrays.toString(maxValue));
     System.out.println();
 
+    // Back track
+    int[] backTrack = new int[value.length];
+    int x = value.length - 1, y = W;
+    while (y > 0 && x >= 0) {
+      if (maxValue[y] == maxValue[y - weight[x]] + value[x]) {
+        backTrack[x] = backTrack[x] + 1;
+        y = y - weight[x];
+        System.out.println("Value " + value[x] + " Weight " + weight[x]);
+      } else {
+        x--;
+      }
+    }
+
+    System.out.println(Arrays.toString(backTrack));
+
     // With 2D
     int[][] dp = new int[value.length + 1][W + 1];
 
